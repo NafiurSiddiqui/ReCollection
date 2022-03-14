@@ -1,10 +1,13 @@
-import { useRef } from 'react';
-
+import { useRef, useState } from 'react';
 import Card from '../UI/Card';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import classes from './QuoteForm.module.css';
 
 const QuoteForm = (props) => {
+	// state
+	// const [isEntering, setIsEntering] = useState(false);
+
+	//ref
 	const authorInputRef = useRef();
 	const textInputRef = useRef();
 
@@ -19,9 +22,19 @@ const QuoteForm = (props) => {
 		props.onAddQuote({ author: enteredAuthor, text: enteredText });
 	}
 
+	const formFocusHandler = () => {
+		console.log('form active');
+		//set state
+		// setIsEntering(true);
+	};
+
 	return (
 		<Card>
-			<form className={classes.form} onSubmit={submitFormHandler}>
+			<form
+				onFocus={formFocusHandler}
+				className={classes.form}
+				onSubmit={submitFormHandler}
+			>
 				{props.isLoading && (
 					<div className={classes.loading}>
 						<LoadingSpinner />
@@ -48,4 +61,6 @@ export default QuoteForm;
 
 /**
  * @onAddQuote - data of this form will be passed in, wherever we use this component.With this exact format. In our case, we used it inside <NewQuote/>
+ * @formFocus - is to check if user activate the form and prompting a notification if tries to leave without finishing it.
+ * @Prompt - will automatically watch if we navigate away and will prompt a notification if a condition is met.PROMPT is not avaialable router > v4.
  */
