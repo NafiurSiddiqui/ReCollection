@@ -25,7 +25,7 @@ const QuoteList = (props) => {
 	//checking for search param value
 	const isSortingAscending = queryParams.get('sort') === 'asc';
 	//testing location obj
-	console.log(location);
+	// console.log(location);
 
 	//using the sort
 	const sortedQuotes = sortQuotes(props.quotes, isSortingAscending);
@@ -33,7 +33,14 @@ const QuoteList = (props) => {
 	//function for sorting
 	const changeSortingHandler = () => {
 		//will updtae the URL with a sharable query parameter
-		navigate('?sort=' + (isSortingAscending ? 'desc' : 'asc'));
+		//--------------------------------------------------------------------------------------------------------------stage1
+		// navigate('?sort=' + (isSortingAscending ? 'desc' : 'asc'));
+		//--------------------------------------------------------------------------------------------------------------stage 2 (more readable)
+		navigate({
+			pathname: location.pathname,
+			search: `?sort=${isSortingAscending ? 'desc' : 'asc'}`,
+		});
+		console.log(location.pathname);
 	};
 
 	return (
