@@ -11,5 +11,5 @@ ReactDOM.render(
 );
 
 /**
- * @browserRouter - always needed at the root to activate the router
+ * @browserRouter - Connects to the browser URL
  */
