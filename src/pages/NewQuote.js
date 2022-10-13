@@ -30,7 +30,7 @@
 
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import QuoteForm from '../components/quotes/QuoteForm';
+import BookForm from '../components/Books/BookForm';
 import useHttp from '../hooks/hooks/use-http';
 import { addQuote } from '../lib/lib/api';
 
@@ -58,7 +58,7 @@ function NewQuote() {
 	};
 
 	return (
-		<QuoteForm isLoading={status === 'pending'} onAddQuote={addQuoteHandler} />
+		<BookForm isLoading={status === 'pending'} onAddQuote={addQuoteHandler} />
 	);
 }
 

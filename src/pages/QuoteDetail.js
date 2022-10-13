@@ -53,13 +53,13 @@
 
 //--------------------------------------------------------------------------------------------------------------stage (rendering server data)
 import { useEffect } from 'react';
-import { Link, Outlet, Route, Routes, useParams } from 'react-router-dom';
-import HighlightedQuote from '../components/quotes/HighlightedQuote';
+import { Outlet, useParams } from 'react-router-dom';
+import HighlightedBook from '../components/Books/HighlightedBook';
 import LoadingSpinner from '../components/UI/LoadingSpinner';
 import useHttp from '../hooks/hooks/use-http';
 import { getSingleQuote } from '../lib/lib/api';
 
-function QuoteDetail() {
+function BookDetail() {
 	//get data
 	const {
 		sendRequest,
@@ -95,13 +95,13 @@ function QuoteDetail() {
 
 	return (
 		<>
-			<HighlightedQuote text={loadedQuote.text} author={loadedQuote.author} />
+			<HighlightedBook text={loadedQuote.text} author={loadedQuote.author} />
 
 			<Outlet />
 		</>
 	);
 }
-export default QuoteDetail;
+export default BookDetail;
 
 /**
  * @sendRequest - needs an ID of which quote it needs to load.

@@ -1,8 +1,7 @@
 import { Fragment } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-
-import QuoteItem from './QuoteItem';
-import classes from './QuoteList.module.css';
+import { useLocation, useNavigate } from 'react-router-dom';
+import BookItem from './BookItem';
+import classes from './BookList.module.css';
 
 //sorting algorithm
 const sortQuotes = (quotes, ascending) => {
@@ -52,7 +51,7 @@ const QuoteList = (props) => {
 			</div>
 			<ul className={classes.list}>
 				{sortedQuotes.map((quote) => (
-					<QuoteItem
+					<BookItem
 						key={quote.id}
 						id={quote.id}
 						author={quote.author}

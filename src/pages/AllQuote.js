@@ -19,8 +19,8 @@
 
 //--------------------------------------------------------------------------------------------------------------stage 3 (adding server data)
 import { useEffect } from 'react';
-import QuoteList from '../components/quotes/QuoteList';
-import NoQuotesFound from '../components/quotes/NoQuotesFound';
+import BookList from '../components/Books/BookList';
+import NoBooksFound from '../components/Books/NoBooksFound';
 import LoadingSpinner from '../components/UI/LoadingSpinner';
 import useHttp from '../hooks/hooks/use-http';
 import { getAllQuotes } from '../lib/lib/api';
@@ -51,10 +51,10 @@ function AllQuotes() {
 	}
 
 	if (status === 'completed' && (!loadedQuotes || loadedQuotes.length === 0)) {
-		return <NoQuotesFound />;
+		return <NoBooksFound />;
 	}
 
-	return <QuoteList quotes={loadedQuotes} />;
+	return <BookList quotes={loadedQuotes} />;
 }
 export default AllQuotes;
 

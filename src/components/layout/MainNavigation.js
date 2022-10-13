@@ -5,7 +5,7 @@ import classes from './MainNavigation.module.css';
 const MainNavigation = () => {
 	return (
 		<header className={classes.header}>
-			<div className={classes.logo}>Great Quotes</div>
+			<div className={classes.logo}>ReCollection</div>
 			<nav className={classes.nav}>
 				<ul>
 					<li>
@@ -13,7 +13,7 @@ const MainNavigation = () => {
 							to="/quotes"
 							className={(navData) => (navData.isActive ? classes.active : '')}
 						>
-							All Quotes
+							Your Books
 						</NavLink>
 					</li>
 					<li>
@@ -21,7 +21,7 @@ const MainNavigation = () => {
 							to="/new-quotes"
 							className={(navData) => (navData.isActive ? classes.active : '')}
 						>
-							Add a Quote
+							Add Notes
 						</NavLink>
 					</li>
 				</ul>

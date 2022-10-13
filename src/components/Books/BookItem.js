@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import classes from './QuoteItem.module.css';
+import classes from './BookItem.module.css';
 
-const QuoteItem = (props) => {
+const BookItem = (props) => {
 	return (
 		<li className={classes.item}>
 			<figure>
@@ -17,7 +17,7 @@ const QuoteItem = (props) => {
 	);
 };
 
-export default QuoteItem;
+export default BookItem;
 
 /**
  * @Link - here we are deriving the dynamic path value we get as we set in our apps> Route which has QuoteDetails.

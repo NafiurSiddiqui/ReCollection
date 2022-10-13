@@ -1,6 +1,6 @@
-import classes from './HighlightedQuote.module.css';
+import classes from './HighlightedBook.module.css';
 
-const HighlightedQuote = (props) => {
+const HighlightedBook = (props) => {
   return (
     <figure className={classes.quote}>
       <p>{props.text}</p>
@@ -9,4 +9,4 @@ const HighlightedQuote = (props) => {
   );
 };
 
-export default HighlightedQuote;
+export default HighlightedBook;
