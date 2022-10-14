@@ -1,0 +1,16 @@
+- App to remember about the books you read
+Based on (Link: https://www.youtube.com/watch?v=Rvey9g0VgY0&ab_channel=MattD%27Avella)
+
+- one of the handy way to remember the book you read is to highlight, take note, sort them under catergory and revisit them.
+
+## App features
+
+1. Read a book, Highlight the parts that interests you. Bookmark the page.Finish the book.
+
+2. Come to the app, set the title and Author of the book. Transfer notes. 
+
+3. categorize the notes into a bucket, Theme, whichever works for you on the back of the card.
+
+4. filter through the category.
+
+5. Reminder to read and practice what you learned.
